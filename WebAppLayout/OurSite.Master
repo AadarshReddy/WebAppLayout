@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="OurSite.master.cs" Inherits="WebAppLayout.OurSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link href="OurStyle.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="centerPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class ="topPanel" ><h1>Product Website</h1></div>
+        <div class ="rightPanel">
+            <table class="auto-style1">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class ="leftPanel">
+            <h1>SlideShow</h1>
+            <marquee>
+                <asp:Image runat="server" ImageUrl="~/images/DSC_0004.JPG" Width="150" Height="150" ID="Image1" />
+                <asp:Image runat="server" ImageUrl="~/images/DSC_0027.JPG" Width="150" Height="150" ID="Image2" />
+                <asp:Image runat="server" ImageUrl="~/images/DSC_0452.JPG" Width="150" Height="150" ID="Image3" />
+
+
+            </marquee>
+        </div>
+        
+    </form>
+</body>
+</html>
